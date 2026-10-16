@@ -1,0 +1,27 @@
+# Cloudflare Pages-style headers (also embedded into the Worker by tools/build-embed.py).
+# The style-src placeholder is replaced at build time (vite.config.ts, plugin "csp-headers") with the sha256 of each inline
+# <style> in dist/index.html, so style-src needs no 'unsafe-inline'.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' __STYLE_HASHES__; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; media-src 'self' data: blob:; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self' https://kodekecil.my.id https://*.kodekecil.my.id
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), fullscreen=(self), clipboard-write=(self)
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+/index.html
+  Cache-Control: no-cache
+/
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache
+  Content-Type: application/manifest+json
+/registerSW.js
+  Cache-Control: no-cache
+/workbox-*.js
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/icons/*
+  Cache-Control: public, max-age=86400

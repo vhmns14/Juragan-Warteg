@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+dist-single/
+deploy-embed/
+.wrangler/
+
+# local tool output
+shots/
+.balance.mjs
+.titles.mjs
+.audio-test/
+__pycache__/
+*.pyc
+*.log
+*.zip
+
+# env / secrets
+.env
+.env.*
+.dev.vars
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

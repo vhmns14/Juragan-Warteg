@@ -1,0 +1,11 @@
+// Cloudflare Worker that serves dist/ embedded in one script (no Pages project needed).
+// Deploy:
+//   npm run build && python3 tools/build-embed.py && npx wrangler deploy -c wrangler.embed.jsonc
+{
+  "name": "juragan-warteg",
+  "main": "deploy-embed/worker.js",
+  "compatibility_date": "2026-10-01",
+  "account_id": "75f1bbdbcc056921de4bfaa8a6e61a78",
+  "workers_dev": true,
+  "routes": [{ "pattern": "juraganwarteg.kodekecil.my.id", "custom_domain": true }]
+}

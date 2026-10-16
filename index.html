@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#8a5228" />
+    <meta name="description" content="Juragan Warteg - game tycoon warteg pixel ala Kairosoft. Dari gerobak sampai franchise. Dibuat oleh KodeKecil." />
+    <meta name="author" content="KodeKecil" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Juragan Warteg" />
+    <link rel="icon" type="image/png" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <title>Juragan Warteg</title>
+    <style>
+      html, body { margin: 0; padding: 0; height: 100%; background: #1a120c; overflow: hidden; overscroll-behavior: none; }
+      body { touch-action: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+      #game { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+      #game canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
+      #loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; color: #f6c440; font: bold 18px monospace; letter-spacing: 2px; }
+    </style>
+  </head>
+  <body>
+    <div id="loading">NGEBUL DULU...</div>
+    <div id="game"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
